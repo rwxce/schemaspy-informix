@@ -1,0 +1,20 @@
+x-schemaspy-base: &schemaspy-base
+  build: .
+  image: schemaspy_custom:latest
+  command:
+    - -configFile
+    - /schemaspy.properties
+    - -dp
+    - /drivers/jdbc-4.50.11.jar
+    - -error
+
+services:
+  schemaspy_analytics:
+    <<: *schemaspy-base
+    container_name: schemaspy_analytics
+    env_file:
+      - ./db/db-analytics/env/.env
+    volumes:
+      - ./drivers:/drivers
+      - ./properties/schemaspy.properties.template:/schemaspy.properties.template
+      - ./db/db-analytics/output:/output

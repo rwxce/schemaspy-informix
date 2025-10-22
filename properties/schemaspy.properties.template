@@ -1,0 +1,13 @@
+# Type of database
+schemaspy.t=informix
+
+# Connection to Informix
+schemaspy.host=${INFORMIX_HOST}
+schemaspy.port=${INFORMIX_PORT}
+schemaspy.server=${INFORMIX_SERVER}
+schemaspy.db=${INFORMIX_DBNAME}
+schemaspy.u=${INFORMIX_USER}
+schemaspy.p=${INFORMIX_PASSWORD}
+
+# Output
+schemaspy.o=/output
