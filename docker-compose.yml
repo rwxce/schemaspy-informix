@@ -6,6 +6,8 @@ x-schemaspy-base: &schemaspy-base
     - /schemaspy.properties
     - -dp
     - /drivers/jdbc-4.50.11.jar
+    - -meta
+    - /metadata/schema.meta.xml
     - -error
 
 services:
@@ -18,3 +20,4 @@ services:
       - ./drivers:/drivers
       - ./properties/schemaspy.properties.template:/schemaspy.properties.template
       - ./db/db-analytics/output:/output
+      - ./db/db-analytics/metadata:/metadata

@@ -8,10 +8,15 @@ It simplifies connecting to, analyzing, and visualizing the structure of an Info
 ## 🧩 Features
 
 * **Automatic documentation**: Generates full HTML reports of the database structure, relationships, and keys.
+
 * **Docker-based execution**: Everything runs in an isolated, reproducible container environment.
+
 * **Native Informix connection**: Uses the Informix JDBC driver for direct connections.
+
 * **Web output**: Produces browsable documentation (`index.html`).
+
 * **Flexible configuration**: All parameters are customizable via `.env` files and property templates.
+
 * **Multi-database support**:
   The project is designed to handle **multiple Informix databases** easily.
   Just copy one existing database directory and rename it, e.g.:
@@ -25,6 +30,19 @@ It simplifies connecting to, analyzing, and visualizing the structure of an Info
 
   Each database folder can have its own `.env`, `output/`, and configuration.
   This allows you to generate documentation for multiple databases independently.
+
+* **Custom schema metadata**:
+  Inside each database folder, you can optionally include an XML file to provide **manual documentation** or **custom descriptions** for databases, tables, columns, and relationships.
+  To do this, create the following file:
+
+  ```
+  db/db-analytics/metadata/schema.meta.xml
+  ```
+
+  The XML file should follow the structure of the official SchemaSpy metadata format.
+  An example of this structure is already included in the repository for reference.
+
+  When present, this file is automatically used by SchemaSpy to **enhance the generated documentation** with these descriptions.
 
 ---
 
@@ -93,6 +111,7 @@ It simplifies connecting to, analyzing, and visualizing the structure of an Info
 
 * You can modify `schemaspy.properties.template` to adjust JDBC parameters, output path, or advanced settings.
 * The container automatically replaces environment variables using `envsubst` before running SchemaSpy.
+* If a `metadata/schema.meta.xml` file exists, SchemaSpy will automatically apply it to enrich the generated output.
 
 ---
 

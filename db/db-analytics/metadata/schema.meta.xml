@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schemaspy.org/xsd/6/schemameta.xsd">
+  <comments>Database description</comments>
+  <tables>
+    <table name="table_name_1" comments="Description of the first table">
+      <columns>
+        <column name="column_name_1" comments="Description of the column"/>
+      </columns>
+    </table>
+
+    <table name="table_name_2" comments="Description of the second table">
+      <columns>
+        <column name="column_name_1" comments="Description of the column"/>
+      </columns>
+    </table>    
+  </tables>
+</schemaMeta>

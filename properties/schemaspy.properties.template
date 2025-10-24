@@ -9,5 +9,8 @@ schemaspy.db=${INFORMIX_DBNAME}
 schemaspy.u=${INFORMIX_USER}
 schemaspy.p=${INFORMIX_PASSWORD}
 
+# Include all schemas
+schemaspy.all=true
+
 # Output
 schemaspy.o=/output
