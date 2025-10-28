@@ -31,26 +31,12 @@ It simplifies connecting to, analyzing, and visualizing the structure of an Info
   Each database folder can have its own `.env`, `output/`, and configuration.
   This allows you to generate documentation for multiple databases independently.
 
-* **Centralized `site` folder for database links**:
-  A new folder named `site` has been added to the **root of the project**. Its purpose is to centralize links to the `index.html` files generated for each database output.
+* **Centralized `site` folder for database links**: A folder named `site` located in the **root of the project**. Its purpose is to centralize links to the `index.html` files generated for each database output.
 
-  * All database outputs (`output/index.html`) should be linked in the `site/index.html` file.
-  * If you add a new database, include its link inside the following section:
-
-  ```html
-  <!-- Databases Link -->
-  <tbody>
-  <tr class="tbl even" valign="top">
-      <td class="detail"><a href="../db/db-analytics/output/index.html">db-analytics</a></td>
-      <td class="comment detail" style="display: table-cell;">
-          <p>Analytics Database</p>
-      </td>
-  </tr>
-  </tbody>
-  ```
-
-  * Update the `<a href="...">` and `<p>` content to reflect the new database name and description.
-  * This allows all database documentation to be accessible from a single, centralized HTML page (`site/index.html`).
+   * All database outputs (`output/db/index.html`) should be linked in the `site/index.html` file.
+   * When adding a new database, include its link inside the **Databases Link** section.
+   * Update the `<a href="...">` and `<p>` content to reflect the new database’s name and description.
+   * This setup ensures that all database documentation is accessible from a single, centralized HTML page (`site/index.html`).
 
 * **Custom schema metadata**:
   Inside each database folder, you can optionally include an XML file to provide **manual documentation** or **custom descriptions** for databases, tables, columns, and relationships.
