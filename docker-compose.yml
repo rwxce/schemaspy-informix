@@ -19,5 +19,5 @@ services:
     volumes:
       - ./drivers:/drivers
       - ./properties/schemaspy.properties.template:/schemaspy.properties.template
-      - ./db/db-analytics/output:/output
+      - ./output/analytics/output:/output
       - ./db/db-analytics/metadata:/metadata
