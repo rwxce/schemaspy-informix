@@ -13,7 +13,7 @@ x-schemaspy-base: &schemaspy-base
 services:
   schemaspy_analytics:
     <<: *schemaspy-base
-    container_name: schemaspy_analytics
+    container_name: informix-schemaspy-analytics
     env_file:
       - ./db/db-analytics/env/.env
     volumes:
